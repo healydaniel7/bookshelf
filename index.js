@@ -63,6 +63,14 @@ server.route( [
             reply ("Deleting " + request.params.id).code(204);
         }
     },
+    // Add a book
+    {
+        method: 'POST',
+        path: '/api/books/add',
+        handler: function(request, reply) {
+
+        }
+    },
     // Home page
     {
         method: 'GET',
