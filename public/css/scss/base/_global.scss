@@ -1,0 +1,50 @@
+/* base/_globasl.scss */
+
+// Limit this file to html tags and (:)pseudo classes, no (.)classes or (#)ids
+
+html {
+  font-size: $global-body-font-size !important;
+}
+body {
+  font-family: $body-font;
+  background-color:$footer-bg;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  &#tinymce {
+    background-color: $white !important;
+  }
+  a {
+  color: $drk-purple;
+  border-bottom: 1px solid #be9fdf;
+  text-decoration: none;
+    &:hover,&:focus,&:active,&:visited {
+      color: $drk-purple;
+      border-bottom: 1px solid $drk-purple;
+      text-decoration: none;
+    }
+  }
+  p {
+    margin-bottom: 16px;
+  }
+  
+}
+nav {
+  a {   
+    border-bottom:1px solid #ddd;
+    &:hover,&:focus,&:active,&:visited {
+       border-bottom:1px solid #ddd;
+    }
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+    a {
+      text-decoration: none;
+      border-bottom:0;
+      &:hover,&:focus,&:active,&:visited {
+        border-bottom: 0;
+        text-decoration: none;
+      }
+    }
+  }
+
+  

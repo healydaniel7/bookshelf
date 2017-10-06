@@ -1,0 +1,42 @@
+@mixin breakpoint($class) {
+	@if $class == lg {
+		@media screen and (min-width: $screen-lg-min) { @content; }
+	}
+	@else if $class == md {
+		@media screen and (min-width: $screen-md-min) { @content; }
+	}
+	@else if $class == mdi {
+		@media screen and (max-width: $screen-md-min) { @content; }
+	}
+	@else if $class == sm {
+		@media screen and (min-width: $screen-sm-min) { @content; }
+	}
+	@else if $class == smi {
+		@media screen and (max-width: $screen-sm-min) { @content; }
+	}
+	@else if $class == xs {
+		@media screen and (max-width: $screen-xs-min) { @content; }
+	}
+	@else {
+		@warn "Breakpoint mixin supports: lg, md, sm, xs";
+	}
+}
+
+@mixin browser($type){
+	@if $type == chrome {
+		@media screen and (-webkit-min-device-pixel-ratio:0) { @content; }
+	}
+}
+
+@mixin flex($align){
+	@if $align == right {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+	@else if $align == left {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+	}
+}

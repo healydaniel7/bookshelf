@@ -1,0 +1,15 @@
+.flex-center-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.flex-center-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.img-stretch {
+  display: block;
+  height: auto;
+  width: 100%;
+}

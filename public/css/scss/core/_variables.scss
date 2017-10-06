@@ -1,0 +1,24 @@
+// Defaults
+$global-body-font-size: 15px; // sets base size for rem to work (1rem = 15px)
+$body-font-size: 1rem;
+$body-line-height: 1.5rem;
+
+// Fonts
+$heading-font: 'Oswald', sans-serif !important;
+$body-font: 'Quattrocento', sans-serif !important;
+
+// Screen Size Breakpoints
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// ECU Colors
+$ecu-purple: #572C86;
+$drk-purple: #41215E;
+$ecu-gold: #FEC923;
+$off-gold: #ffe187;
+$footer-bg: #6C6D68;
+$black: #000000;
+$grey: #AAAAAA;
+$white: #FFFFFF;
