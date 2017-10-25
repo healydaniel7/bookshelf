@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/vegam17/bookshelf/issues"
   },
-  "homepage": "https://github.com/vegam17/bookshelf#readme"
+  "homepage": "https://github.com/vegam17/bookshelf#readme",
+  "dependencies": {
+    "boom": "^6.0.0",
+    "joi": "^13.0.1",
+    "node-uuid": "^1.4.8"
+  }
 }

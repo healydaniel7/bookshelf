@@ -1,3 +1,7 @@
+const Boom = require('boom');
+const uuid = require('node-uuid');
+const Joi = require('joi');
+
 var MongoClient = require('mongodb').MongoClient,
     assert = require('assert'),
     Hapi = require('hapi');
@@ -31,8 +35,27 @@ server.route( [
         method: 'POST',
         path: '/api/books',
         handler: function(request, reply) {
-            reply ("Adding new book");
+        	const book = request.payload;	
+        	book._id = uuid.v1();
+
+
+        	collection.save(book, (err, result) => {
+        		if(err) {
+        			return reply(Boom.wrap(err, "Internal Error"));
+        		}
+
+        		reply(book);
+        	});
+        },
+        config: {
+        validate: {
+            payload: {
+                title: Joi.string().min(2).max(50).required(),
+                author: Joi.string().min(2).max(50).required(),
+                genre: Joi.array(),
+            }
         }
+    }
     },
     // Get a single book
     {
