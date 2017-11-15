@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head><% include partials/page/head.ejs %></head>
-	<body>
-		<% include partials/page/header.ejs %>
-		<main>
-			[Book display]
-		</main>
-		<aside class="sidebar">
-			[Category display]
-		</aside>
-		<% include partials/page/footer.ejs %>
-		<% include partials/page/jsdefaults.ejs %>
-	</body>
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>BookShelf API</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span></span> BookShelf API</h1>
+
+        <p>Login or Register with:</p>
+
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+    </div>
+
+</div>
+</body>
 </html>
